@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [suite001]">
+  <test thread-count="5" name="test001(failed)">
+    <parameter name="petID" value="344"/>
+    <classes>
+      <class name="restassuredscipts.ScriptMain">
+        <methods>
+          <include name="get_Call_Method" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- restassuredscipts.ScriptMain -->
+    </classes>
+  </test> <!-- test001(failed) -->
+</suite> <!-- Failed suite [suite001] -->

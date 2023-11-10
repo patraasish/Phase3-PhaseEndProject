@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "a7f4546e-3091-40b2-bbbe-a209d7a774d2",
+		"name": "Postman Assignment_002",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23404772"
+	},
+	"item": [
+		{
+			"name": "Put_method",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsonData = pm.response.json(); \r",
+							"pm.test(\"Verify  ID\", function () { \r",
+							"        pm.expect(jsonData.category.id).is.to.equal(20021); \r",
+							"    });\r",
+							"    \r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 9223372016900013000,\r\n\"category\": {\r\n\"id\": 20021,\r\n\"name\": \"string\" },\r\n\"name\": \"doggie\", \r\n\"photoUrls\": [\r\n\"string\"\r\n],\r\n \"tags\": [\r\n{\r\n\"id\": 0,\r\n\"name\": \"string\"\r\n}\r\n],\r\n\"status\": \"{{status_value}}\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{testURL}}",
+					"host": [
+						"{{testURL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
